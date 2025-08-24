@@ -1,12 +1,12 @@
 {
-    "name": "empty-mod-template",
-    "title": "Mod Template",
-    "version": "0.0.0",
+    "name": "personal-space-platforms",
+    "title": "Personal Space Platforms",
+    "version": "0.0.1",
     "factorio_version": "2.0",
     "author": "HEROgold",
     "contact": "",
     "homepage": "https://discord.gg/qPe4wtHuJR",
-    "description": "Mod description",
+    "description": "A mod which forces each player to have their own space platform, preventing shared platforms.\nThis disables the recipe for creating new platforms.",
     "package": {},
     "dependencies": [
         "base >= 0.0"
@@ -16,6 +16,6 @@
     "freezing_required": false,
     "rail_bridges_required": false,
     "segmented_units_required": false,
-    "space_travel_required": false,
+    "space_travel_required": true,
     "spoiling_required": false
 }
