@@ -4,7 +4,9 @@ require("scripts.helpers")
 --- @param player LuaPlayer
 --- @param platform LuaSpacePlatform
 local function swap_to_platform_force(player, platform)
-    if not settings.global["lock-platforms"].value then return end
+    if not settings.global["lock-platforms"].value then
+        return
+    end
     --- @type LuaForce?
     local platform_force = nil
     if platform_has_force(platform) then
@@ -33,7 +35,6 @@ local function swap_to_platform_force(player, platform)
         player.print("targeting platform force: " .. target_force.name)
     end
 
-
     if platform and not is_on_own_platform(player) then
         player.force = target_force
         player.print("switched to force (not own platform)" .. target_force.name)
@@ -51,7 +52,9 @@ function on_player_changed_surface(event)
     --- @type LuaSurface
     local surface = game.surfaces[event.surface_index]
     local platform = surface.platform
-    if not platform then return end
+    if not platform then
+        return
+    end
 
     swap_to_platform_force(player, platform)
 end

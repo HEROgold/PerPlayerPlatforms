@@ -1,4 +1,3 @@
-
 --- When a space platform is destroyed, remove the old force, and recreate the player platform.
 --- @param event EventData.on_entity_died
 function on_entity_died(event)
@@ -7,7 +6,7 @@ function on_entity_died(event)
     on_player_created({
         name = defines.events.on_player_created,
         player_index = player.index,
-        tick = event.tick
+        tick = event.tick,
     })
     game.forces[force.name] = nil
 end
